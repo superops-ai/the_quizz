@@ -1,0 +1,15 @@
+.loginpage {
+	 background: linear-gradient(#E76F51, #D44E55);
+}
+
+.connexion-button {
+	border-radius: 0;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #fff;
+	background-color: #333;
+}
+
+.link-register-page {
+	font-size: 3.5rem;
+}

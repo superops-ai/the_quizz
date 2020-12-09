@@ -1,0 +1,40 @@
+.quizz-page {
+	background-color: #333;
+}
+
+.question {
+	font-size: 90px;
+	color: #FFF;
+}
+
+.answer-button {
+	width: 45%;
+	height: 45%;
+	border-radius: 40px;
+	color: #FFF;
+	font-size: 8rem;
+	border: solid 10px #E1E5E7;
+	transition: 0.3s;
+}
+
+.answer-button:focus {
+	border-color: lime;
+	transform: scale(0.95);
+	opacity: 0.8;
+}
+
+.answer-a {
+	background: linear-gradient(#7FC4BC, #7EC264);
+}
+
+.answer-b {
+	background: linear-gradient(#7FC4BC, #2A9D8F);
+}
+
+.answer-c {
+	background: linear-gradient(#F4A261, #E9C46A);
+}
+
+.answer-d {
+	background: linear-gradient(#E76F51, #D44E55);
+}

@@ -1,0 +1,64 @@
+main
+{
+	height: 100vh;
+}
+
+h1 {
+	color: #FFF;
+	font-size: 8.5rem;
+	font-weight: 700;
+}
+
+h2 {
+	color: #FFF;
+	font-size: 4.5rem;
+	font-weight: 600;
+}
+
+button {
+	border: none;
+	background-color: #FFF;
+	font-size: 4.5rem;
+	color: #333;
+	height: 180px;
+	border-radius: 90px;
+}
+
+button:focus {
+	outline: none;
+}
+
+input {
+	border-radius: 90px;
+	border: none;
+	font-size: 3rem;
+	height: 170px;
+	padding-left: 60px;
+}
+
+input:focus {
+	outline: none;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.MuiPaper-root {
+	height: 80px;
+	width: auto;
+}
+
+.MuiAlert-message {
+	font-size: 32px;
+}
+
+.MuiSvgIcon-root {
+	width: 3rem !important;
+	height: 3rem !important;
+}
