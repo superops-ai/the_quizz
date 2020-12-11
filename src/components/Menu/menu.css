@@ -1,0 +1,10 @@
+nav {
+	position: fixed;
+	top: 0;
+	height: 5%;
+}
+
+nav a {
+	transform: rotateZ(10deg);
+	width: 140px;
+}

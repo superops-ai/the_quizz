@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Le Grand Quizz",
+  "name": "Affontez-vos amis sur des questions de culture générale !",
   "icons": [
     {
       "src": "favicon.ico",

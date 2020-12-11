@@ -10,7 +10,7 @@ function Home() {
   }, []);
 
   return (
-    <main className="homepage d-flex flex-column">
+    <main className="offgame-background d-flex flex-column">
 
       <div className="w-100 h-75 d-flex flex-column align-items-center justify-content-center">
         <i

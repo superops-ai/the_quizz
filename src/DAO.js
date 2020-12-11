@@ -17,7 +17,6 @@ export default class DAO {
   }
 
   async get_auth() {
-  	console.log(help.get_cookie("auth_token"));
   	let rep = {};
   	await this.axios.get("get_auth").then((response) => {
   		rep = response.data;
@@ -39,5 +38,21 @@ export default class DAO {
   		rep = response.data;
   	});
   	return rep;
+  }
+
+  async post_instance(data) {
+    let rep = {};
+    await this.axios.post("instances", {}).then((response) => {
+      rep = response.data;
+    });
+    return rep;
+  }
+
+  async get_instance(code) {
+    let rep = {};
+    await this.axios.get("instances?code=" + code).then((response) => {
+      rep = response.data;
+    })
+    return rep;
   }
  }

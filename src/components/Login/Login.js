@@ -13,14 +13,17 @@ function Alert(props) {
 
 function Login() {
 	const [email, set_email] =  useState('');
-    const [password, set_password] =  useState('');
-    const [openError, setOpenError] = React.useState(false);
+  const [password, set_password] =  useState('');
+  const [openError, setOpenError] = React.useState(false);
 
 	const api = new DAO();
 	const help = new Helper();
 
 	const handleOnChange = (e) => {
-        eval('set_' + [e.target.name] + "('" + e.target.value + "');");
+        if (e.target.name === "email")
+        	set_email(e.target.value);
+        else if (e.target.name === "password")
+        	set_password(e.target.value);
     }
 
     const handleClick_error = () => {
@@ -40,28 +43,28 @@ function Login() {
 	 }, []);
 
 	const login = async(e) => {
-		console.log(e);
 		if (!email || !password)
 			return;
 
-		const regexEmail = '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}'
-        if (email.search(regexEmail) < 0)
-            return;
+		const regexEmail = '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}';
+    if (email.search(regexEmail) < 0)
+        return;
 
-        e.preventDefault();
-        let json = {
-        	email: email,
-        	password: password
-        }
+    e.preventDefault();
+    let json = {
+    	email: email,
+    	password: password
+    }
 
-        await api.login(JSON.stringify(json)).then((datas) => {
-        	help.set_cookie("auth_token", datas.token);
-        	window.location.href = "/player/quizz";
-        }).catch(()=> handleClick_error());
+    await api.login(JSON.stringify(json)).then((datas) => {
+      help.set_cookie("mercureAuthorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InN1YnNjcmliZSI6W10sInB1Ymxpc2giOlsiKiJdfX0.65srwH3sOu6QIicqD2H2jrSVWvzIoVdTfGB3gKTCyU4");
+    	help.set_cookie("auth_token", datas.token);
+    	window.location.href = "/player/quizz";
+    }).catch(()=> handleClick_error());
 	}
 
 	return (
-		<main className="loginpage d-flex flex-column">
+		<main className="offgame-background d-flex flex-column">
 			<div className="h-50 d-flex flex-column justify-content-center align-items-center">
 				<i
 		          data-eva="unlock-outline"

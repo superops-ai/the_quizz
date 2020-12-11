@@ -14,8 +14,8 @@ function Quizz() {
 	}
 
 	return (
-		<main className="quizz-page d-flex flex-column">
-			<div className="h-50 d-flex flex-column justify-content-around align-items-center">
+		<main className="offgame-background d-flex flex-column">
+			<div className="h-50 d-flex flex-column justify-content-center align-items-center">
 				<i
 		          data-eva="question-mark-circle-outline"
 		          data-eva-fill="#FFF"

@@ -11,7 +11,7 @@ function Alert(props) {
 }
 
 function Register() {
-	const [email, set_email] =  useState('');
+    const [email, set_email] =  useState('');
     const [password, set_password] =  useState('');
     const [firstname, set_firstname] = useState('');
     const [openSuccess, setOpenSuccess] = React.useState(false);
@@ -20,7 +20,12 @@ function Register() {
     const api = new DAO();
 
     const handleOnChange = (e) => {
-        eval('set_' + [e.target.name] + "('" + e.target.value + "');");
+        if (e.target.name === "email")
+          set_email(e.target.value);
+        else if (e.target.name === "password")
+          set_password(e.target.value);
+        else if (e.target.name === "firstname")
+          set_firstname(e.target.value);
     }
 
 	useEffect(() => {
@@ -77,7 +82,7 @@ function Register() {
 	}
 
 	return (
-		<main className="register-page d-flex flex-column">
+		<main className="offgame-background d-flex flex-column">
 			<div className="h-50 d-flex flex-column justify-content-center align-items-center">
 				<i
 		          data-eva="people-outline"
