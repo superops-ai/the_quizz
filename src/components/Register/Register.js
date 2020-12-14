@@ -5,6 +5,7 @@ import * as eva from 'eva-icons';
 import DAO from "../../DAO";
 import MuiAlert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
+import Helper from "../../Helper";
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -18,7 +19,8 @@ function Register() {
     const [openError, setOpenError] = React.useState(false);
 
     const api = new DAO();
-
+    const help = new Helper();
+    
     const handleOnChange = (e) => {
         if (e.target.name === "email")
           set_email(e.target.value);
@@ -72,7 +74,7 @@ function Register() {
         	password: password,
         	firstname: firstname
         };
-
+        help.set_cookie("mercureAuthorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InN1YnNjcmliZSI6W10sInB1Ymxpc2giOlsiKiJdfX0.65srwH3sOu6QIicqD2H2jrSVWvzIoVdTfGB3gKTCyU4");
         await api.post_users(JSON.stringify(json)).then((datas) => {
         	handleClick_success();
         	setTimeout(function() {

@@ -59,7 +59,7 @@ function Login() {
     await api.login(JSON.stringify(json)).then((datas) => {
       help.set_cookie("mercureAuthorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InN1YnNjcmliZSI6W10sInB1Ymxpc2giOlsiKiJdfX0.65srwH3sOu6QIicqD2H2jrSVWvzIoVdTfGB3gKTCyU4");
     	help.set_cookie("auth_token", datas.token);
-    	window.location.href = "/player/quizz";
+    	window.location.href = "/play";
     }).catch(()=> handleClick_error());
 	}
 

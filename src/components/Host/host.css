@@ -1,0 +1,22 @@
+.instance-list-item {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 2px 4px 8px 0 #000;
+}
+
+.button-instance-list {
+	font-size: 28px;
+	height: auto;
+	background-color: #FFF;
+	font-weight: 600;
+}
+
+.instance-join {
+	border: 5px solid #7EC264;
+	color: #7EC264;
+}
+
+.instance-delete {
+	border: 5px solid #D44E55;
+	color: #D44E55;
+}

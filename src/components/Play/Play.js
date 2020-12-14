@@ -14,8 +14,7 @@ function Play(props) {
 	useEffect(() => {
 	    eva.replace();
 	}, []);
-		// URL is a built-in JavaScript class to manipulate URLs
-	
+
 	const handleOnChange = (e) => {
         if (e.target.name === "code")
         	set_code(e.target.value);
@@ -27,7 +26,8 @@ function Play(props) {
     	e.preventDefault();
     	await api.get_instance(code).then((datas) => {	
     		if (datas['hydra:totalItems'] === 1) {
-    			set_instance(datas['hydra:member'][0]);
+    			let instance = datas['hydra:member'][0];
+    			set_instance(instance);
     			set_connected(true);
     		} else {
     			console.log("Aucune partie trouvée");
@@ -53,7 +53,7 @@ function Play(props) {
 			        	<button onClick={joinGame} className="mt-5" type="submit">Rejoindre</button>
 			        </form>
 				</div>
-			: <Hub instance={instance} /> }
+			: <Hub instance={instance} user={props.user} /> }
 		</main>
 	);
 }

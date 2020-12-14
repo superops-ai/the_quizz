@@ -1,0 +1,18 @@
+.avatar {
+	border-radius: 50%;
+	overflow: hidden;
+	height: 350px;
+	width: 350px;
+	border: 15px solid #FFF;
+	box-shadow: 2px 4px 8px 0 #000;
+}
+
+.avatar img {
+	width: 100%;
+	object-fit: contain;
+}
+
+.playersNames {
+	color: white;
+	font-size: 42px;
+}
